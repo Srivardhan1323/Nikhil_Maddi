@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F0FDF4"/>
+      <stop offset="100%" stop-color="#DCFCE7"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4ADE80"/>
+      <stop offset="100%" stop-color="#16A34A"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#16A34A" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .float1 { animation: float 3s ease-in-out infinite; }
+      .float2 { animation: float 3.5s ease-in-out infinite 0.7s; }
+      .float3 { animation: float 4s ease-in-out infinite 1.2s; }
+      .float4 { animation: float 3.2s ease-in-out infinite 0.3s; }
+      .spin { animation: spin 8s linear infinite; transform-origin: 260px 200px; }
+      .pulse { animation: pulse 2s ease-in-out infinite; }
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="520" height="400" rx="24" fill="url(#bg)"/>
+
+  <!-- Central dashboard card -->
+  <g class="float1">
+    <rect x="130" y="100" width="260" height="200" rx="16" fill="white" filter="url(#shadow)"/>
+    <!-- Header bar -->
+    <rect x="130" y="100" width="260" height="40" rx="16" fill="#16A34A"/>
+    <rect x="130" y="122" width="260" height="18" fill="#16A34A"/>
+    <text x="180" y="126" font-size="9" fill="white" font-family="sans-serif" font-weight="bold">TDS COMPLIANCE DASHBOARD</text>
+    <!-- Dots -->
+    <circle cx="148" cy="120" r="4" fill="#4ADE80"/>
+    <circle cx="162" cy="120" r="4" fill="#FDE68A"/>
+    <circle cx="176" cy="120" r="4" fill="#FCA5A5"/>
+
+    <!-- Bar chart -->
+    <rect x="155" y="220" width="22" height="50" rx="4" fill="#4ADE80"/>
+    <rect x="183" y="200" width="22" height="70" rx="4" fill="#16A34A"/>
+    <rect x="211" y="235" width="22" height="35" rx="4" fill="#4ADE80"/>
+    <rect x="239" y="185" width="22" height="85" rx="4" fill="#15803D"/>
+    <rect x="267" y="210" width="22" height="60" rx="4" fill="#4ADE80"/>
+    <rect x="295" y="225" width="22" height="45" rx="4" fill="#16A34A"/>
+
+    <!-- X axis -->
+    <line x1="148" y1="273" x2="325" y2="273" stroke="#D1FAE5" stroke-width="1.5"/>
+
+    <!-- Status labels -->
+    <rect x="148" y="155" width="60" height="20" rx="6" fill="#F0FDF4"/>
+    <text x="178" y="168" text-anchor="middle" font-size="7.5" fill="#16A34A" font-family="sans-serif" font-weight="bold">Q1 Filed ✓</text>
+    <rect x="222" y="155" width="60" height="20" rx="6" fill="#F0FDF4"/>
+    <text x="252" y="168" text-anchor="middle" font-size="7.5" fill="#16A34A" font-family="sans-serif" font-weight="bold">Q2 Filed ✓</text>
+    <rect x="295" y="155" width="52" height="20" rx="6" fill="#FEF9C3"/>
+    <text x="321" y="168" text-anchor="middle" font-size="7.5" fill="#CA8A04" font-family="sans-serif" font-weight="bold">Q3 Due</text>
+  </g>
+
+  <!-- Floating - Form 24Q -->
+  <g class="float2" transform="translate(60, 80)">
+    <rect width="80" height="60" rx="10" fill="white" filter="url(#shadow)"/>
+    <rect width="80" height="16" rx="10" fill="#16A34A"/>
+    <rect x="0" y="10" width="80" height="6" fill="#16A34A"/>
+    <text x="40" y="12" text-anchor="middle" font-size="7" fill="white" font-family="sans-serif" font-weight="bold">Form 24Q</text>
+    <rect x="10" y="24" width="60" height="4" rx="2" fill="#D1FAE5"/>
+    <rect x="10" y="32" width="45" height="4" rx="2" fill="#D1FAE5"/>
+    <rect x="10" y="40" width="55" height="4" rx="2" fill="#D1FAE5"/>
+    <circle cx="60" cy="50" r="7" fill="#4ADE80"/>
+    <polyline points="57,50 60,53 65,47" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Floating - Rupee badge -->
+  <g class="float3" transform="translate(400, 90)">
+    <circle cx="35" cy="35" r="35" fill="#16A34A" filter="url(#shadow)"/>
+    <text x="35" y="42" text-anchor="middle" font-size="28" fill="white" font-family="sans-serif" font-weight="bold">₹</text>
+  </g>
+
+  <!-- Floating Form 16 card -->
+  <g class="float4" transform="translate(380, 270)">
+    <rect width="90" height="56" rx="10" fill="white" filter="url(#shadow)"/>
+    <rect width="90" height="16" rx="10" fill="#4ADE80"/>
+    <rect x="0" y="10" width="90" height="6" fill="#4ADE80"/>
+    <text x="45" y="12" text-anchor="middle" font-size="7" fill="white" font-family="sans-serif" font-weight="bold">Form 16/16A</text>
+    <rect x="10" y="24" width="70" height="4" rx="2" fill="#D1FAE5"/>
+    <rect x="10" y="32" width="55" height="4" rx="2" fill="#D1FAE5"/>
+    <rect x="10" y="40" width="65" height="4" rx="2" fill="#D1FAE5"/>
+  </g>
+
+  <!-- Calendar icon floating -->
+  <g class="float1" transform="translate(52, 250)">
+    <rect width="62" height="60" rx="8" fill="white" filter="url(#shadow)"/>
+    <rect width="62" height="18" rx="8" fill="#15803D"/>
+    <rect x="0" y="10" width="62" height="8" fill="#15803D"/>
+    <text x="31" y="13" text-anchor="middle" font-size="7" fill="white" font-family="sans-serif" font-weight="bold">QUARTERLY</text>
+    <rect x="8" y="24" width="12" height="10" rx="2" fill="#D1FAE5"/>
+    <rect x="25" y="24" width="12" height="10" rx="2" fill="#D1FAE5"/>
+    <rect x="42" y="24" width="12" height="10" rx="2" fill="#D1FAE5"/>
+    <rect x="8" y="38" width="12" height="10" rx="2" fill="#4ADE80"/>
+    <rect x="25" y="38" width="12" height="10" rx="2" fill="#D1FAE5"/>
+    <rect x="42" y="38" width="12" height="10" rx="2" fill="#D1FAE5"/>
+  </g>
+
+  <!-- Sparkles -->
+  <g class="pulse">
+    <circle cx="470" cy="60" r="4" fill="#4ADE80" opacity="0.5"/>
+    <circle cx="40" cy="370" r="3" fill="#16A34A" opacity="0.4"/>
+    <circle cx="490" cy="350" r="5" fill="#FDE68A" opacity="0.3"/>
+  </g>
+</svg>

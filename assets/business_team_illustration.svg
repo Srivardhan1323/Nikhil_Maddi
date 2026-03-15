@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F0FDF4"/>
+      <stop offset="100%" stop-color="#DCFCE7"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#16A34A" flood-opacity="0.1"/>
+    </filter>
+    <style>
+      .floatA { animation: float 3.5s ease-in-out infinite; }
+      .floatB { animation: float 3s ease-in-out infinite 0.8s; }
+      .floatC { animation: float 4s ease-in-out infinite 1.5s; }
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-7px); }
+      }
+    </style>
+  </defs>
+  <rect width="480" height="360" rx="20" fill="url(#bg)"/>
+
+  <!-- Central table/desk -->
+  <ellipse cx="240" cy="280" rx="160" ry="18" fill="#BBF7D0" opacity="0.6"/>
+  <rect x="90" y="180" width="300" height="90" rx="12" fill="white" filter="url(#shadow)"/>
+  <rect x="90" y="180" width="300" height="16" rx="12" fill="#16A34A"/>
+  <rect x="90" y="188" width="300" height="8" fill="#16A34A"/>
+
+  <!-- Chart on table -->
+  <rect x="110" y="208" width="18" height="40" rx="4" fill="#4ADE80"/>
+  <rect x="134" y="196" width="18" height="52" rx="4" fill="#16A34A"/>
+  <rect x="158" y="215" width="18" height="33" rx="4" fill="#4ADE80"/>
+  <rect x="182" y="200" width="18" height="48" rx="4" fill="#15803D"/>
+  <line x1="105" y1="250" x2="215" y2="250" stroke="#DCFCE7" stroke-width="1.5"/>
+
+  <!-- Laptop on table -->
+  <rect x="235" y="204" width="120" height="60" rx="8" fill="#1E1B4B"/>
+  <rect x="241" y="210" width="108" height="48" rx="4" fill="#312E81"/>
+  <rect x="245" y="214" width="100" height="40" rx="3" fill="#3730A3"/>
+  <!-- Screen content -->
+  <rect x="252" y="220" width="50" height="5" rx="2" fill="#818CF8"/>
+  <rect x="252" y="230" width="40" height="4" rx="2" fill="#6366F1"/>
+  <rect x="252" y="238" width="45" height="4" rx="2" fill="#C7D2FE"/>
+  <circle cx="316" cy="232" r="10" fill="#22C55E"/>
+  <polyline points="312,232 315,235 321,228" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Person 1 (left) -->
+  <g class="floatA">
+    <circle cx="130" cy="148" r="22" fill="#FDE68A"/>
+    <rect x="112" y="165" width="36" height="42" rx="10" fill="#4F46E5"/>
+    <!-- Hair -->
+    <path d="M108 142 Q130 118 152 142" fill="#92400E"/>
+  </g>
+
+  <!-- Person 2 (center) -->
+  <g class="floatB">
+    <circle cx="240" cy="140" r="24" fill="#FED7AA"/>
+    <rect x="220" y="158" width="40" height="44" rx="10" fill="#16A34A"/>
+  </g>
+
+  <!-- Person 3 (right) -->
+  <g class="floatC">
+    <circle cx="350" cy="148" r="22" fill="#FDE68A"/>
+    <rect x="332" y="165" width="36" height="42" rx="10" fill="#7C3AED"/>
+  </g>
+
+  <!-- Speech bubble from center person -->
+  <g class="floatB">
+    <rect x="256" y="100" width="80" height="30" rx="10" fill="white" filter="url(#shadow)"/>
+    <path d="M272 130 L268 140 L280 130 Z" fill="white"/>
+    <rect x="264" y="109" width="64" height="5" rx="2" fill="#16A34A"/>
+    <rect x="264" y="118" width="48" height="5" rx="2" fill="#DCFCE7"/>
+  </g>
+
+  <!-- Floating document -->
+  <g class="floatA" transform="translate(30, 80)">
+    <rect width="70" height="80" rx="8" fill="white" filter="url(#shadow)"/>
+    <rect width="70" height="14" rx="8" fill="#16A34A"/>
+    <rect x="0" y="8" width="70" height="6" fill="#16A34A"/>
+    <rect x="10" y="22" width="50" height="4" rx="2" fill="#DCFCE7"/>
+    <rect x="10" y="30" width="40" height="4" rx="2" fill="#DCFCE7"/>
+    <rect x="10" y="38" width="46" height="4" rx="2" fill="#DCFCE7"/>
+    <circle cx="50" cy="60" r="10" fill="#4ADE80"/>
+    <polyline points="46,60 50,64 56,56" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Rupee badge -->
+  <g class="floatC" transform="translate(390, 75)">
+    <circle cx="30" cy="30" r="30" fill="#16A34A" filter="url(#shadow)"/>
+    <text x="30" y="38" text-anchor="middle" font-size="24" fill="white" font-family="sans-serif" font-weight="bold">₹</text>
+  </g>
+</svg>

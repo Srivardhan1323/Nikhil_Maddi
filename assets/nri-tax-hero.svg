@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EEF2FF"/>
+      <stop offset="100%" stop-color="#E0E7FF"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#4F46E5" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .float1 { animation: floatA 3s ease-in-out infinite; }
+      .float2 { animation: floatA 3.5s ease-in-out infinite 0.6s; }
+      .float3 { animation: floatA 4s ease-in-out infinite 1.2s; }
+      .float4 { animation: floatA 3.2s ease-in-out infinite 0.9s; }
+      .rotate { animation: rotate 12s linear infinite; transform-origin: 260px 200px; }
+      .pulse { animation: pulse 2.5s ease-in-out infinite; }
+      @keyframes floatA {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-9px); }
+      }
+      @keyframes rotate { to { transform: rotate(360deg); } }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 0.9; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="520" height="400" rx="24" fill="url(#bg)"/>
+
+  <!-- Earth / Globe -->
+  <g class="float1">
+    <circle cx="260" cy="200" r="100" fill="#3730A3" opacity="0.06"/>
+    <circle cx="260" cy="200" r="85" fill="#4338CA" opacity="0.1"/>
+    <circle cx="260" cy="200" r="68" fill="white" filter="url(#shadow)"/>
+    <!-- Globe lines -->
+    <ellipse cx="260" cy="200" rx="68" ry="68" stroke="#C7D2FE" stroke-width="1.5" fill="none"/>
+    <ellipse cx="260" cy="200" rx="40" ry="68" stroke="#C7D2FE" stroke-width="1" fill="none"/>
+    <ellipse cx="260" cy="200" rx="68" ry="28" stroke="#C7D2FE" stroke-width="1" fill="none"/>
+    <line x1="192" y1="200" x2="328" y2="200" stroke="#C7D2FE" stroke-width="1"/>
+    <line x1="260" y1="132" x2="260" y2="268" stroke="#C7D2FE" stroke-width="1"/>
+    <!-- India highlight -->
+    <circle cx="280" cy="195" r="16" fill="#4F46E5" opacity="0.25"/>
+    <circle cx="280" cy="195" r="8" fill="#4F46E5" opacity="0.7"/>
+    <!-- Pulse on India -->
+    <circle cx="280" cy="195" r="18" stroke="#4F46E5" stroke-width="1.5" fill="none" class="pulse"/>
+    <!-- NRI location pin -->
+    <circle cx="180" cy="155" r="8" fill="#F59E0B"/>
+    <line x1="180" y1="163" x2="220" y2="187" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="4 3"/>
+  </g>
+
+  <!-- Passport -->
+  <g class="float2" transform="translate(370, 80)">
+    <rect width="70" height="90" rx="10" fill="#312E81" filter="url(#shadow)"/>
+    <rect x="8" y="12" width="54" height="6" rx="3" fill="#818CF8"/>
+    <rect x="8" y="22" width="38" height="4" rx="2" fill="#6366F1"/>
+    <circle cx="35" cy="50" r="18" fill="#4338CA"/>
+    <circle cx="35" cy="50" r="13" fill="#6366F1"/>
+    <text x="35" y="55" text-anchor="middle" font-size="11" fill="white" font-family="sans-serif">🪪</text>
+    <rect x="8" y="74" width="54" height="4" rx="2" fill="#6366F1"/>
+    <rect x="8" y="82" width="40" height="3" rx="2" fill="#4338CA"/>
+    <text x="35" y="12" text-anchor="middle" font-size="6" fill="white" font-family="sans-serif" font-weight="bold" dy="4">PASSPORT</text>
+  </g>
+
+  <!-- Airplane -->
+  <g class="float3" transform="translate(55, 90)">
+    <circle cx="36" cy="36" r="36" fill="#4F46E5" filter="url(#shadow)"/>
+    <text x="36" y="46" text-anchor="middle" font-size="26" font-family="sans-serif">✈</text>
+  </g>
+
+  <!-- DTAA Document -->
+  <g class="float4" transform="translate(60, 240)">
+    <rect width="85" height="68" rx="10" fill="white" filter="url(#shadow)"/>
+    <rect width="85" height="18" rx="10" fill="#4F46E5"/>
+    <rect x="0" y="10" width="85" height="8" fill="#4F46E5"/>
+    <text x="42" y="13" text-anchor="middle" font-size="7" fill="white" font-family="sans-serif" font-weight="bold">DTAA Treaty</text>
+    <rect x="10" y="25" width="65" height="4" rx="2" fill="#C7D2FE"/>
+    <rect x="10" y="33" width="50" height="4" rx="2" fill="#E0E7FF"/>
+    <rect x="10" y="41" width="60" height="4" rx="2" fill="#C7D2FE"/>
+    <circle cx="65" cy="55" r="8" fill="#22C55E"/>
+    <polyline points="62,55 65,58 70,52" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Rupee bank -->
+  <g class="float1" transform="translate(380, 270)">
+    <rect width="74" height="56" rx="10" fill="white" filter="url(#shadow)"/>
+    <rect width="74" height="16" rx="10" fill="#3730A3"/>
+    <rect x="0" y="10" width="74" height="6" fill="#3730A3"/>
+    <text x="37" y="12" text-anchor="middle" font-size="7" fill="white" font-family="sans-serif" font-weight="bold">NRI Bank A/C</text>
+    <text x="37" y="40" text-anchor="middle" font-size="20" fill="#4F46E5" font-family="sans-serif">₹</text>
+  </g>
+
+  <!-- Connection dots -->
+  <g class="pulse">
+    <circle cx="460" cy="65" r="4" fill="#6366F1" opacity="0.5"/>
+    <circle cx="45" cy="360" r="3" fill="#4F46E5" opacity="0.4"/>
+    <circle cx="490" cy="345" r="5" fill="#F59E0B" opacity="0.3"/>
+    <circle cx="100" cy="190" r="3" fill="#4F46E5" opacity="0.4"/>
+  </g>
+</svg>

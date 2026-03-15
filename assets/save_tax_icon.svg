@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F0FDF4"/>
+      <stop offset="100%" stop-color="#DCFCE7"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="60" fill="url(#bg)"/>
+  <!-- Piggy bank shape -->
+  <ellipse cx="60" cy="68" rx="32" ry="26" fill="white" opacity="0.9"/>
+  <ellipse cx="60" cy="68" rx="32" ry="26" stroke="#16A34A" stroke-width="2" fill="none"/>
+  <!-- Coin slot top -->
+  <rect x="52" y="40" width="16" height="5" rx="2.5" fill="#16A34A"/>
+  <!-- Ear -->
+  <circle cx="90" cy="60" r="8" fill="white" stroke="#16A34A" stroke-width="2"/>
+  <circle cx="90" cy="60" r="4" fill="#DCFCE7"/>
+  <!-- Legs -->
+  <rect x="42" y="90" width="8" height="12" rx="4" fill="#16A34A"/>
+  <rect x="54" y="90" width="8" height="12" rx="4" fill="#16A34A"/>
+  <rect x="66" y="90" width="8" height="12" rx="4" fill="#16A34A"/>
+  <!-- Eye -->
+  <circle cx="74" cy="63" r="3" fill="#16A34A"/>
+  <!-- Rupee on body -->
+  <text x="55" y="76" font-size="18" fill="#4ADE80" font-family="sans-serif" font-weight="bold">₹</text>
+</svg>

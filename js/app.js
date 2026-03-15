@@ -3,18 +3,20 @@ $(document).ready(function(){
     /* ==========================================================================
        Hero Slick Slider Initialization
        ========================================================================== */
-    $('.hero-main-slider').slick({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        fade: true,
-        cssEase: 'linear',
-        autoplay: true,
-        autoplaySpeed: 5000,
-        arrows: true,
-        prevArrow: '<button type="button" class="slick-prev"><i class="ph ph-caret-left"></i></button>',
-        nextArrow: '<button type="button" class="slick-next"><i class="ph ph-caret-right"></i></button>'
-    });
+    if ($('.hero-main-slider').length > 0) {
+        $('.hero-main-slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            autoplay: true,
+            autoplaySpeed: 5000,
+            arrows: true,
+            prevArrow: '<button type="button" class="slick-prev"><i class="ph ph-caret-left"></i></button>',
+            nextArrow: '<button type="button" class="slick-next"><i class="ph ph-caret-right"></i></button>'
+        });
+    }
 
     /* ==========================================================================
        Tab Switching Logic (Business & Why Us)
@@ -128,7 +130,7 @@ $(document).ready(function(){
     }, observerOptions);
 
     // Apply animation to specific sections
-    const animateElements = document.querySelectorAll('.individual-card, .tab-pane, .why-tab-btn, .step, .testimonial-card, .contact-form-wrapper');
+    const animateElements = document.querySelectorAll('.individual-card, .tab-pane, .why-tab-btn, .step, .testimonial-card, .contact-form-wrapper, .scroll-fade-in');
     
     animateElements.forEach(el => {
         el.style.opacity = '0'; // Start hidden

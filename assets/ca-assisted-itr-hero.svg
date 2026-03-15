@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EEF2FF"/>
+      <stop offset="100%" stop-color="#E0F2FE"/>
+    </linearGradient>
+    <linearGradient id="desk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C7D2FE"/>
+      <stop offset="100%" stop-color="#A5B4FC"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#6366F1" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .float1 { animation: float 3s ease-in-out infinite; }
+      .float2 { animation: float 3.5s ease-in-out infinite 0.5s; }
+      .float3 { animation: float 4s ease-in-out infinite 1s; }
+      .float4 { animation: float 3.2s ease-in-out infinite 1.5s; }
+      .pulse { animation: pulse 2s ease-in-out infinite; }
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.8; }
+        50% { opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="520" height="400" rx="24" fill="url(#bg)"/>
+
+  <!-- Main desk platform -->
+  <ellipse cx="260" cy="320" rx="180" ry="22" fill="#C7D2FE" opacity="0.5"/>
+
+  <!-- CA desk body -->
+  <rect x="100" y="200" width="320" height="110" rx="16" fill="white" filter="url(#shadow)"/>
+  <rect x="100" y="200" width="320" height="14" rx="8" fill="url(#desk)"/>
+
+  <!-- Laptop base -->
+  <rect x="170" y="230" width="180" height="110" rx="10" fill="#312E81"/>
+  <rect x="178" y="238" width="164" height="90" rx="6" fill="#1E1B4B"/>
+  <!-- Screen glow -->
+  <rect x="182" y="242" width="156" height="82" rx="4" fill="#3730A3"/>
+  <!-- Screen chart lines -->
+  <line x1="195" y1="280" x2="325" y2="280" stroke="#6366F1" stroke-width="1" opacity="0.4"/>
+  <line x1="195" y1="295" x2="325" y2="295" stroke="#6366F1" stroke-width="1" opacity="0.4"/>
+  <!-- Checkmarks on screen -->
+  <circle cx="210" cy="260" r="6" fill="#22C55E" opacity="0.9"/>
+  <polyline points="207,260 210,263 215,257" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <rect x="222" y="256" width="70" height="4" rx="2" fill="#818CF8"/>
+  <circle cx="210" cy="275" r="6" fill="#22C55E" opacity="0.9"/>
+  <polyline points="207,275 210,278 215,272" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <rect x="222" y="271" width="55" height="4" rx="2" fill="#818CF8"/>
+  <circle cx="210" cy="290" r="6" fill="#F59E0B" opacity="0.9"/>
+  <rect x="222" y="286" width="80" height="4" rx="2" fill="#C7D2FE"/>
+
+  <!-- CA person -->
+  <circle cx="130" cy="195" r="28" fill="#FDE68A"/>
+  <rect x="110" y="218" width="40" height="50" rx="10" fill="#4F46E5"/>
+  <!-- Tie -->
+  <polygon points="130,224 133,228 130,248 127,228" fill="#818CF8"/>
+  <!-- Arms -->
+  <rect x="92" y="222" width="20" height="8" rx="4" fill="#4F46E5"/>
+  <rect x="148" y="222" width="20" height="8" rx="4" fill="#4F46E5"/>
+  <!-- CA badge -->
+  <rect x="118" y="230" width="24" height="14" rx="4" fill="#EEF2FF"/>
+  <text x="130" y="240" text-anchor="middle" font-size="6" fill="#4F46E5" font-family="sans-serif" font-weight="bold">CA</text>
+
+  <!-- Floating document 1 - ITR Form -->
+  <g class="float1" transform="translate(370, 130)">
+    <rect width="68" height="84" rx="8" fill="white" filter="url(#shadow)"/>
+    <rect x="8" y="10" width="52" height="5" rx="2" fill="#818CF8"/>
+    <rect x="8" y="20" width="40" height="4" rx="2" fill="#E0E7FF"/>
+    <rect x="8" y="28" width="45" height="4" rx="2" fill="#E0E7FF"/>
+    <rect x="8" y="36" width="35" height="4" rx="2" fill="#E0E7FF"/>
+    <rect x="8" y="50" width="52" height="14" rx="4" fill="#4F46E5"/>
+    <text x="34" y="60" text-anchor="middle" font-size="7" fill="white" font-family="sans-serif">ITR Form</text>
+    <circle cx="34" cy="74" r="5" fill="#22C55E"/>
+    <polyline points="31,74 34,77 39,71" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Floating card - PAN card -->
+  <g class="float2" transform="translate(60, 100)">
+    <rect width="72" height="44" rx="8" fill="white" filter="url(#shadow)"/>
+    <rect width="72" height="14" rx="8" fill="#4F46E5"/>
+    <rect x="0" y="8" width="72" height="6" fill="#4F46E5"/>
+    <text x="36" y="11" text-anchor="middle" font-size="6" fill="white" font-family="sans-serif" font-weight="bold">PAN CARD</text>
+    <rect x="8" y="20" width="20" height="16" rx="2" fill="#E0E7FF"/>
+    <rect x="34" y="22" width="30" height="4" rx="2" fill="#C7D2FE"/>
+    <rect x="34" y="30" width="24" height="3" rx="2" fill="#E0E7FF"/>
+  </g>
+
+  <!-- Floating badge - Form 16 -->
+  <g class="float3" transform="translate(400, 250)">
+    <rect width="64" height="52" rx="8" fill="#F0FDF4" filter="url(#shadow)"/>
+    <rect x="8" y="8" width="48" height="5" rx="2" fill="#4ADE80"/>
+    <rect x="8" y="18" width="38" height="4" rx="2" fill="#DCFCE7"/>
+    <rect x="8" y="26" width="44" height="4" rx="2" fill="#DCFCE7"/>
+    <text x="32" y="44" text-anchor="middle" font-size="6.5" fill="#16A34A" font-family="sans-serif" font-weight="bold">Form 16</text>
+  </g>
+
+  <!-- Floating green check badge -->
+  <g class="float4" transform="translate(60, 240)">
+    <circle cx="24" cy="24" r="24" fill="#4F46E5" filter="url(#shadow)"/>
+    <polyline points="14,24 21,31 34,17" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Small sparkles -->
+  <g class="pulse">
+    <circle cx="460" cy="80" r="4" fill="#6366F1" opacity="0.4"/>
+    <circle cx="55" cy="350" r="3" fill="#22C55E" opacity="0.4"/>
+    <circle cx="490" cy="340" r="5" fill="#F59E0B" opacity="0.3"/>
+  </g>
+</svg>
