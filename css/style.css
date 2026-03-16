@@ -1055,3 +1055,362 @@ details[open] .faq-question i {
         font-size: 1rem;
     }
 }
+
+/* ==========================================================================
+   LAUNCH YOUR STARTUP PAGE STYLES
+   ========================================================================== */
+
+.hero-desc-large {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-body);
+    margin-bottom: 2.5rem;
+}
+
+.illustration-placeholder {
+    width: 100%;
+    max-width: 450px;
+    height: 350px;
+    background-color: var(--accent-light);
+    border: 2px dashed var(--accent);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.illustration-placeholder::after {
+    content: 'Illustration Placeholder';
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 1.2rem;
+    opacity: 0.6;
+}
+
+.btn-outline-primary {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    display: inline-block;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: all 0.4s ease;
+}
+
+.btn-outline-primary:hover {
+    background: var(--primary);
+    color: #fff;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(26,26,124,0.3);
+}
+
+.startup-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+@media (max-width: 1024px) {
+    .startup-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .startup-services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.startup-service-card {
+    background: var(--bg-white);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.startup-service-card:hover { 
+    transform: translateY(-10px); 
+    box-shadow: var(--shadow-md); 
+    border-color: var(--accent-light); 
+}
+
+.startup-service-card .service-icon-top {
+    width: 80px;
+    height: 80px;
+    background: var(--bg-light);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    transition: var(--transition-smooth);
+}
+
+.startup-service-card:hover .service-icon-top {
+    background: var(--primary);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.startup-service-card h3 { 
+    font-size: 1.3rem; 
+    color: var(--primary); 
+    margin-bottom: 1rem; 
+}
+
+.startup-service-card p {
+    color: var(--text-body);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.client-profile-placeholder {
+    width: 60px;
+    height: 60px;
+    background: var(--bg-light);
+    border-radius: 50%;
+    margin: 0 auto 1.5rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+/* Mobile responsive fixes */
+@media (max-width: 900px) {
+    .hero-text-col, .hero-image-col {
+        order: unset; /* We want text first, image second on mobile generally for the left-aligned text slider */
+    }
+    
+    .hero-image-col {
+        margin-top: 2rem;
+    }
+    
+    .btn-outline-primary {
+        margin-left: 0 !important;
+        margin-top: 1rem;
+    }
+    
+    .hero-cta-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+/* ==========================================================================
+   ADD-ON SERVICES PAGE STYLES
+   ========================================================================== */
+
+.addon-hero-section {
+    position: relative;
+    padding: 160px 0 100px;
+    background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-white) 100%);
+    overflow: hidden;
+}
+
+.addon-highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+}
+
+.addon-highlight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #fff;
+    padding: 1.25rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+}
+
+.addon-highlight-item .icon-wrapper {
+    width: 45px;
+    height: 45px;
+    background: var(--accent-light);
+    color: var(--accent);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.addon-highlight-item h5 {
+    font-size: 1.05rem;
+    margin-bottom: 0.25rem;
+    color: var(--primary);
+}
+
+.addon-highlight-item p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Service Details Blocks */
+.addon-detail-block {
+    padding: 6rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.addon-detail-block:nth-child(even) {
+    background: var(--bg-light);
+}
+
+.addon-detail-block:nth-child(odd) {
+    background: #fff;
+}
+
+.addon-detail-block:last-child {
+    border-bottom: none;
+}
+
+.addon-block-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.addon-block-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-body);
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+    .addon-highlights-grid {
+        grid-template-columns: 1fr;
+    }
+    .addon-block-wrapper {
+        flex-direction: column !important;
+    }
+    .addon-block-content {
+        order: 2; /* Text always below image on mobile */
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .addon-block-image {
+        order: 1; /* Image always above text on mobile */
+    }
+}
+
+/* ==========================================================================
+   FOR OUR INDIVIDUALS SECTION
+   ========================================================================== */
+.for-individuals {
+    padding: 5rem 0 6rem;
+    position: relative;
+    overflow: hidden;
+    /* Very soft gradient matching the mockup */
+    background: linear-gradient(135deg, #ffffff 30%, #f4eaff 100%);
+}
+
+.for-individuals::before {
+    content: '';
+    position: absolute;
+    bottom: -15%;
+    left: -5%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(162, 110, 245, 0.15) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.for-individuals .container {
+    position: relative;
+    z-index: 1;
+}
+
+.individuals-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 4rem;
+}
+
+.individuals-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.individual-card {
+    background: transparent;
+    padding: 3rem 1.5rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Hover state giving it the "Tax Notice" active look */
+.individual-card:hover {
+    background: #ffffff;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+    transform: translateY(-8px);
+}
+
+.individual-card .card-thumb {
+    width: 140px;
+    height: auto;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.individual-card:hover .card-thumb {
+    transform: scale(1.08);
+}
+
+.individual-card h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0;
+    font-family: var(--font-heading);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .individuals-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575px) {
+    .individuals-grid {
+        grid-template-columns: 1fr;
+    }
+    .individuals-title {
+        font-size: 2.2rem;
+        margin-bottom: 2.5rem;
+    }
+}
