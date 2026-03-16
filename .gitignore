@@ -1,0 +1,18 @@
+# Temporary and generated files
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Development scripts
+sync_footer_logo.js
+check_responsiveness.js
+fix_responsiveness.js
+final_cleanup.js
+sync_footer_logo.js

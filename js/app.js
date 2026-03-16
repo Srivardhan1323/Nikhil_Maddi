@@ -122,9 +122,15 @@ $(document).ready(function(){
     const animateOnScroll = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Add an animation class based on the element
-                entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
-                observer.unobserve(entry.target); // Only animate once
+                const el = entry.target;
+                if (el.classList.contains('reveal-left-trigger')) {
+                    el.style.animation = 'revealFromLeft 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards';
+                } else if (el.classList.contains('reveal-right-trigger')) {
+                    el.style.animation = 'revealFromRight 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards';
+                } else {
+                    el.style.animation = 'fadeInUp 0.8s ease-out forwards';
+                }
+                observer.unobserve(el);
             }
         });
     }, observerOptions);
@@ -165,4 +171,38 @@ $(document).ready(function(){
             }, 1500);
         });
     }
+
+    /* ==========================================================================
+       Dynamic Text Looping (Startup Page)
+       ========================================================================== */
+    function initDynamicTextLoop() {
+        const dynamicElements = document.querySelectorAll('.hero-branding.dynamic-text');
+        
+        dynamicElements.forEach(el => {
+            const values = JSON.parse(el.getAttribute('data-values'));
+            let currentIndex = 0;
+            
+            // Initial reveal
+            el.classList.add('anim-reveal');
+            
+            setInterval(() => {
+                // 1. Close the current text
+                el.classList.remove('anim-reveal');
+                el.classList.add('anim-close');
+                
+                setTimeout(() => {
+                    // 2. Change text
+                    currentIndex = (currentIndex + 1) % values.length;
+                    el.textContent = values[currentIndex];
+                    
+                    // 3. Reveal the new text
+                    el.classList.remove('anim-close');
+                    el.classList.add('anim-reveal');
+                }, 800); // Wait for anim-close (0.8s)
+                
+            }, 4000); // Change every 4 seconds
+        });
+    }
+
+    initDynamicTextLoop();
 });
